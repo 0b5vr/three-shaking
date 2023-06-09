@@ -1,0 +1,12 @@
+name: Init
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - name: Fetch Deps
+      shell: bash
+      run: npm ci
